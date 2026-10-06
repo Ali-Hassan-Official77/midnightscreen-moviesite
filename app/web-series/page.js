@@ -1,0 +1,4 @@
+import SectionGrid from "@/components/SectionGrid";
+export const runtime = 'edge';
+import {tmdb} from "@/lib/tmdb"; export const revalidate=1800;
+export default async function WebSeriesPage(){const[p,d,s]=await Promise.all([tmdb.webSeries(),tmdb.tvByGenre(18),tmdb.tvByGenre(10765)]);return <div className="min-h-screen bg-[#05070b] py-12"><div className="mx-auto max-w-7xl px-5 sm:px-8"><div className="rounded-[32px] border border-white/10 bg-white/[.03] p-8 sm:p-12"><p className="text-xs uppercase tracking-[.3em] text-cyan-300/70">Series universe</p><h1 className="mt-3 text-5xl font-semibold tracking-tight">Web Series</h1><p className="mt-4 max-w-2xl text-white/45">Long-form stories, limited series and binge-worthy television from around the world.</p></div></div><SectionGrid title="Popular series" movies={p?.results}/><SectionGrid title="Drama series" movies={d?.results}/><SectionGrid title="Sci-Fi & Fantasy" movies={s?.results}/></div>}
