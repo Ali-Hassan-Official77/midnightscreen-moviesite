@@ -1,4 +1,4 @@
-# CineVanta
+# MidnightScreen
 
 Premium movie and web-series discovery platform built with Next.js, Tailwind CSS, Framer Motion and TMDB.
 
