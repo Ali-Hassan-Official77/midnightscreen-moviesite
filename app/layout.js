@@ -22,6 +22,8 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main>{children}</main>
         <Footer />
+
+    <script src="https://cdn.zanderio.ai/widget/loader.js" data-id="wdg_6WPWCZtZExFhGXfiSCqjXpA0" defer></script>
       </body>
     </html>
   );
